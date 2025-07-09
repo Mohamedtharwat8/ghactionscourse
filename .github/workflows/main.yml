@@ -6,9 +6,15 @@ on:
       - main
 
 jobs:
-  exmplr-job:
+  example-job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print a welcome message
         run: echo "Welcome to our fist Github Actions Workflow!"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: List repository files
+        run: ls -la
