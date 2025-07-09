@@ -18,3 +18,11 @@ jobs:
 
       - name: Run tests
         run: npm test
+  develop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Run develop
+        run: npm develop
